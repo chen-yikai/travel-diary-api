@@ -14,7 +14,7 @@ RUN gradle dependencies --no-daemon
 COPY src/ src/
 
 # Build the application
-RUN gradle buildFatJar --no-daemon
+RUN gradle shadowJar --no-daemon
 
 # Runtime stage
 FROM eclipse-temurin:21-jre-alpine
