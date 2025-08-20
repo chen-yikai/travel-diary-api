@@ -1,0 +1,240 @@
+openapi: "3.1.0"
+info:
+  title: "travel_diary_api API"
+  description: "travel_diary_api API"
+  version: "1.0.0"
+servers:
+  - url: "http://0.0.0.0:8080"
+paths:
+  /api/{file}:
+    get:
+      description: ""
+      parameters:
+        - name: "file"
+          in: "path"
+          required: true
+          schema:
+            type: "string"
+      responses:
+        "200":
+          description: "OK"
+          content:
+            application/json:
+              schema:
+                type: "string"
+  /api/diary:
+    get:
+      description: ""
+      responses:
+        "200":
+          description: "OK"
+          content:
+            application/json:
+              schema:
+                type: "string"
+  /api/diary/collection:
+    get:
+      description: ""
+      parameters:
+        - name: "auth_token"
+          in: "header"
+          required: false
+          schema:
+            type: "string"
+      responses:
+        "200":
+          description: "OK"
+          content:
+            '*/*':
+              schema:
+                $ref: "#/components/schemas/FavoriteDiaryGetResponse"
+              examples:
+                Example#1:
+                  description: ""
+                  value:
+                    msg: "Success"
+                    data: [ ]
+        "403":
+          description: "Forbidden"
+          content:
+            '*/*':
+              schema:
+                $ref: "#/components/schemas/FavoriteDiaryResponse"
+              examples:
+                Example#1:
+                  description: ""
+                  value:
+                    msg: "UnAuthorized"
+                    data:
+                      diaryId: ""
+                      favoriteDateTime: ""
+    put:
+      description: ""
+      parameters:
+        - name: "auth_token"
+          in: "header"
+          required: false
+          schema:
+            type: "string"
+        - name: "diary_id"
+          in: "query"
+          required: false
+          schema:
+            type: "string"
+      responses:
+        "200":
+          description: "OK"
+          content:
+            '*/*':
+              schema:
+                $ref: "#/components/schemas/FavoriteDiaryResponse"
+              examples:
+                Example#1:
+                  description: ""
+                  value:
+                    msg: "Success"
+                    data:
+                      diaryId: ""
+                      favoriteDateTime: ""
+        "403":
+          description: "Forbidden"
+          content:
+            '*/*':
+              schema:
+                $ref: "#/components/schemas/FavoriteDiaryResponse"
+              examples:
+                Example#1:
+                  description: ""
+                  value:
+                    msg: "UnAuthorized"
+                    data:
+                      diaryId: ""
+                      favoriteDateTime: ""
+  /api/user-agreement:
+    get:
+      description: ""
+      responses:
+        "200":
+          description: "OK"
+          content:
+            text/html:
+              schema:
+                type: "string"
+  /api/users:
+    get:
+      description: ""
+      responses:
+        "200":
+          description: "OK"
+          content:
+            '*/*':
+              schema:
+                $ref: "#/components/schemas/Map_String"
+  /api/users/signin:
+    post:
+      description: ""
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/AuthRequest"
+        required: true
+      responses:
+        "200":
+          description: "OK"
+          content:
+            '*/*':
+              schema:
+                $ref: "#/components/schemas/AuthResponse"
+              examples:
+                Example#1:
+                  description: ""
+                  value:
+                    data: "null"
+                    msg: "Sign in successful"
+                Example#2:
+                  description: ""
+                  value:
+                    data: "null"
+                    msg: "Sign in successful"
+        "400":
+          description: "Bad Request"
+          content:
+            '*/*':
+              schema:
+                $ref: "#/components/schemas/AuthResponse"
+              examples:
+                Example#1:
+                  description: ""
+                  value:
+                    data:
+                      authToken: ""
+                    msg: "null"
+components:
+  schemas:
+    FavoriteDiaryData:
+      type: "object"
+      properties:
+        diaryId:
+          type: "string"
+          default: ""
+        favoriteDateTime:
+          type: "string"
+          default: ""
+      required:
+        - "diaryId"
+        - "favoriteDateTime"
+    FavoriteDiaryGetResponse:
+      type: "object"
+      properties:
+        msg:
+          type: "string"
+        data:
+          type: "array"
+          items:
+            $ref: "#/components/schemas/FavoriteDiaryData"
+      required:
+        - "msg"
+        - "data"
+    FavoriteDiaryResponse:
+      type: "object"
+      properties:
+        msg:
+          type: "string"
+        data:
+          $ref: "#/components/schemas/FavoriteDiaryData"
+      required:
+        - "msg"
+        - "data"
+    Map:
+      type: "object"
+      properties: { }
+    Map_String:
+      type: "string"
+    AuthRequest:
+      type: "object"
+      properties:
+        userEmailAddress:
+          type: "string"
+        userPassword:
+          type: "string"
+      required:
+        - "userEmailAddress"
+        - "userPassword"
+    AuthData:
+      type: "object"
+      properties:
+        authToken:
+          type: "string"
+      required:
+        - "authToken"
+    AuthResponse:
+      type: "object"
+      properties:
+        data:
+          $ref: "#/components/schemas/AuthData"
+        msg:
+          type: "string"
+      required:
+        - "data"
+        - "msg"

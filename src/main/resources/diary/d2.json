@@ -1,0 +1,17 @@
+{
+   "id":"C8F2A1B3-9D4E-7F5A-B8C6-2E1D9A7F3B5C",
+   "text":[
+      {
+        "type":"text",
+        "body":"Aujourd'hui, j'ai visité la majestueuse Tour Eiffel. Cette merveille architecturale de Gustave Eiffel continue de m'émerveiller à chaque visite. La vue depuis le troisième étage était absolument breathtaking - on pouvait voir tout Paris s'étendre à nos pieds. Les jardins du Trocadéro offrent le meilleur point de vue pour admirer cette Dame de Fer dans toute sa splendeur."
+      },
+      {
+        "type":"image",
+        "body":"eiffel_tower.jpg"
+      },
+      {
+        "type":"text",
+        "body":"Le soir venu, j'ai eu la chance d'assister au spectacle des illuminations dorées qui transforment la tour en un véritable joyau scintillant. C'est un moment magique que chaque visiteur de Paris devrait vivre au moins une fois dans sa vie."
+      }
+   ]
+}

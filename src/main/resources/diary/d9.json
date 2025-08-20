@@ -1,0 +1,25 @@
+{
+   "id":"A7C3E9B1-5D2F-8A4B-C6E1-9F3A7B5D2C8E",
+   "text":[
+      {
+        "type":"text",
+        "body":"Toulouse, la Ville Rose ! Cette cité du Sud-Ouest de la France tire son surnom de la couleur chaude de ses briques de terre cuite qui rougeoient magnifiquement au coucher du soleil. Dès mon arrivée, j'ai été séduit par cette atmosphère si particulière, mélange d'histoire médiévale et de modernité technologique. La place du Capitole, véritable cœur battant de la ville, impressionne par ses dimensions et son architecture néoclassique. Les façades roses se parent d'une lumière dorée en fin de journée, créant un spectacle inoubliable."
+      },
+      {
+        "type":"text",
+        "body":"La Basilique Saint-Sernin, joyau de l'art roman, constitue l'une des plus grandes églises romanes conservées au monde. Son clocher octogonal à cinq étages s'élève majestueusement au-dessus des toits toulousains. L'intérieur, avec ses voûtes imposantes et ses chapiteaux sculptés, témoigne du passage des pèlerins de Saint-Jacques-de-Compostelle. Les reliques de saint Sernin reposent dans la crypte, perpétuant une tradition vieille de plus de mille ans. Chaque pierre semble vibrer de l'histoire des siècles passés."
+      },
+      {
+        "type":"text",
+        "body":"Le Couvent des Jacobins m'a ébloui par son architecture gothique méridionale unique. Le fameux 'palmier' de la voûte, ces nervures qui s'épanouissent comme les branches d'un arbre, représente un chef-d'œuvre architectural absolu. Les jardins intérieurs offrent un havre de paix au cœur de la ville. Toulouse, c'est aussi la capitale européenne de l'aéronautique et de l'espace. Visiter l'usine Airbus ou la Cité de l'espace permet de comprendre pourquoi on surnomme cette ville 'la Silicon Valley française'."
+      },
+      {
+        "type":"image",
+        "body":"place_capitole.jpg"
+      },
+      {
+        "type":"text",
+        "body":"Les bords de Garonne offrent de délicieuses promenades, surtout au coucher du soleil quand les façades roses se reflètent dans l'eau. La gastronomie toulousaine, avec le cassoulet, les violettes confites et le foie gras, ravit tous les gourmets. Les marchés colorés, comme celui de la place des Carmes, regorgent de produits du terroir occitan. Cette ville sait allier tradition et innovation avec un art de vivre incomparable."
+      }
+   ]
+}
