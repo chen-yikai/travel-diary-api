@@ -4,7 +4,10 @@ info:
   description: "travel_diary_api API"
   version: "1.0.0"
 servers:
+  - url: https://skills-travel-diary-api.eliaschen.dev
+    description: Deployment
   - url: "http://localhost:8080"
+    description: Local
 paths:
   /api/{file}:
     get:

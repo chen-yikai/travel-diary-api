@@ -22,7 +22,8 @@ import java.util.Date
 import java.util.UUID
 
 fun Application.configureRouting() {
-    val users = mutableMapOf<String, String>()
+    val users = mutableMapOf<String, String>() // email, authToken
+    val passwords = mutableMapOf<String, String>() // email, password
     val favorites = mutableListOf<FavoriteDiaryData>()
 
     routing {
@@ -44,15 +45,23 @@ fun Application.configureRouting() {
                 if (!users.containsKey(email)) {
                     val token = UUID.randomUUID().toString().replace("-", "")
                     users[email] = token
+                    passwords[email] = password
                     call.respond(
                         HttpStatusCode.OK,
                         AuthResponse(msg = "Sign in successful", data = AuthData(authToken = token))
                     )
                 } else {
-                    call.respond(
-                        HttpStatusCode.OK,
-                        AuthResponse(msg = "Sign in successful", data = AuthData(authToken = users[email]!!))
-                    )
+                    if (passwords[email] == password) {
+                        call.respond(
+                            HttpStatusCode.OK,
+                            AuthResponse(msg = "Sign in successful", data = AuthData(authToken = users[email]!!))
+                        )
+                    } else {
+                        call.respond(
+                            HttpStatusCode.Unauthorized,
+                            AuthResponse(msg = "Wrong password", data = AuthData(authToken = ""))
+                        )
+                    }
                 }
             } catch (e: Exception) {
                 call.respond(
