@@ -4,7 +4,7 @@ info:
   description: "travel_diary_api API"
   version: "1.0.0"
 servers:
-  - url: https://skills-travel-diary-api.eliaschen.dev
+  - url: "https://skills-travel-diary-api.eliaschen.dev"
     description: Deployment
   - url: "http://localhost:8080"
     description: Local
@@ -19,12 +19,39 @@ paths:
           schema:
             type: "string"
       responses:
+        "400":
+          description: "Bad Request"
+          content:
+            '*/*':
+              schema:
+                type: "string"
+              examples:
+                Example#1:
+                  value: "Missing file"
+        "404":
+          description: "Not Found"
+          content:
+            '*/*':
+              schema:
+                type: "string"
+              examples:
+                Example#1:
+                  value: "File not found"
         "200":
           description: "OK"
           content:
             application/json:
               schema:
                 type: "string"
+                format: "byte"
+            image/jpeg:
+              schema:
+                type: "string"
+                format: "byte"
+            application/octet-stream:
+              schema:
+                type: "string"
+                format: "byte"
   /api/diary:
     get:
       description: ""
@@ -113,6 +140,9 @@ paths:
                     data:
                       diaryId: ""
                       favoriteDateTime: ""
+  /api/reset:
+    delete:
+      description: ""
   /api/user-agreement:
     get:
       description: ""
@@ -160,6 +190,19 @@ paths:
                   value:
                     data: "null"
                     msg: "Sign in successful"
+        "401":
+          description: "Unauthorized"
+          content:
+            '*/*':
+              schema:
+                $ref: "#/components/schemas/AuthResponse"
+              examples:
+                Example#1:
+                  description: ""
+                  value:
+                    data:
+                      authToken: ""
+                    msg: "Wrong password"
         "400":
           description: "Bad Request"
           content:

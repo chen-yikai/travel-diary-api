@@ -137,5 +137,11 @@ fun Application.configureRouting() {
             val page = this::class.java.getResource("/user-agreement.html")!!.readText()
             call.respondText(page, ContentType.Text.Html)
         }
+
+        delete("/api/reset") {
+            users.clear()
+            passwords.clear()
+            favorites.clear()
+        }
     }
 }
