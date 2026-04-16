@@ -3,6 +3,8 @@ import { swagger } from "@elysiajs/swagger";
 import { openapi } from "@elysiajs/openapi";
 
 const PORT = process.env.PORT ? parseInt(process.env.PORT) : 3000;
+const HOST = process.env.HOST || "0.0.0.0";
+const API_URL = process.env.API_URL || `http://${HOST}:${PORT}`;
 
 // Types
 type FavoriteDiaryData = {
@@ -139,8 +141,8 @@ new Elysia()
         },
         servers: [
           {
-            url: "http://0.0.0.0:3000",
-            description: "Local development server",
+            url: API_URL,
+            description: "API Server",
           },
         ],
       },
