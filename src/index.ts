@@ -252,12 +252,9 @@ new Elysia()
       },
     }
   )
-  .get("/api/diary", async () => {
+.get("/api/diary", async () => {
     try {
-      const diaryPath = new URL(import.meta.url).pathname.replace(
-        /\/src\/.*/,
-        "/public/diary/diaries.json"
-      );
+      const diaryPath = `${process.cwd()}/public/diary/diaries.json`;
       const diaries = await Bun.file(diaryPath).text();
       return new Response(diaries, { headers: { "Content-Type": "application/json" } });
     } catch {
@@ -266,7 +263,7 @@ new Elysia()
         headers: { "Content-Type": "application/json" },
       });
     }
-  }, {
+  }
     detail: {
       tags: ["Diary"],
       summary: "Get all diary entries",
@@ -281,13 +278,10 @@ new Elysia()
       }
     }
   })
-  .get("/api/:file", async ({ params, set }) => {
+.get("/api/:file", async ({ params, set }) => {
     const fileName = params.file;
     try {
-      const filePath = new URL(import.meta.url).pathname.replace(
-        /\/src\/.*/,
-        `/public/diary/${fileName}`
-      );
+      const filePath = `${process.cwd()}/public/diary/${fileName}`;
       const file = Bun.file(filePath);
       const exists = await file.exists();
 
@@ -331,18 +325,15 @@ new Elysia()
       }
     }
   })
-  .get("/api/user-agreement", async () => {
+.get("/api/user-agreement", async () => {
     try {
-      const filePath = new URL(import.meta.url).pathname.replace(
-        /\/src\/.*/,
-        "/public/user-agreement.html"
-      );
+      const filePath = `${process.cwd()}/public/user-agreement.html`;
       const html = await Bun.file(filePath).text();
       return new Response(html, { headers: { "Content-Type": "text/html" } });
     } catch {
       return new Response("Not found", { status: 404 });
     }
-  }, {
+  }
     detail: {
       tags: ["Diary"],
       summary: "Get user agreement",
