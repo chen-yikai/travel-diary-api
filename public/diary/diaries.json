@@ -1,0 +1,101 @@
+{
+  "msg": "Success",
+  "data": [
+    {
+      "diary_id": "C8F2A1B3-9D4E-7F5A-B8C6-2E1D9A7F3B5C",
+      "diary_title": "La Dame de Fer - Tour Eiffel",
+      "diary_main_text": "d2.json",
+      "diary_upload_datetime": "2023-05-15 16:45:20",
+      "diary_image": "eiffel_tower.jpg",
+      "diary_upload_username": "Marie Dubois"
+    },
+    {
+      "diary_id": "F7E3B2C1-5A8D-4F9E-A1C7-8B4D6F2E9A5B",
+      "diary_title": "Les Traboules du Vieux Lyon",
+      "diary_main_text": "d3.json",
+      "diary_upload_datetime": "2023-06-08 14:20:15",
+      "diary_image": "vieux_lyon.jpg",
+      "diary_upload_username": "Pierre Moreau"
+    },
+    {
+      "diary_id": "A9D4F6B2-3C7E-8A1B-D5F9-4E2A6C8B1D7F",
+      "diary_title": "Azur et Soleil - Nice Côte d'Azur",
+      "diary_main_text": "d4.json",
+      "diary_upload_datetime": "2023-07-12 10:30:45",
+      "diary_image": "promenade_anglais.jpg",
+      "diary_upload_username": "Sophie Laurent"
+    },
+    {
+      "diary_id": "D2B7F9A4-6E1C-5B8D-F3A9-7C4E2B9F6A1D",
+      "diary_title": "Marseille, Cité Phocéenne",
+      "diary_main_text": "d5.json",
+      "diary_upload_datetime": "2023-08-03 18:15:30",
+      "diary_image": "vieux_port.jpg",
+      "diary_upload_username": "Antoine Roussel"
+    },
+    {
+      "diary_id": "B5C8E1F4-7A2D-9F6B-C3E8-5A1F4D7B2E9C",
+      "diary_title": "Bordeaux, Perle d'Aquitaine",
+      "diary_main_text": "d6.json",
+      "diary_upload_datetime": "2023-09-20 13:45:10",
+      "diary_image": "place_bourse.jpg",
+      "diary_upload_username": "Camille Bertrand"
+    },
+    {
+      "diary_id": "E8A3C6F1-4B9D-2E7A-F5C9-8D1A3F6B4E7C",
+      "diary_title": "Trésors du Louvre",
+      "diary_main_text": "d7.json",
+      "diary_upload_datetime": "2023-10-14 11:25:50",
+      "diary_image": "louvre.jpg",
+      "diary_upload_username": "Lucas Fontaine"
+    },
+    {
+      "diary_id": "F3A8D2B6-9E4C-1B7F-D8A5-3F2E6C1A9B4D",
+      "diary_title": "Strasbourg, Capitale Européenne",
+      "diary_main_text": "d8.json",
+      "diary_upload_datetime": "2023-11-05 15:30:25",
+      "diary_image": "petite_france.jpg",
+      "diary_upload_username": "Amélie Wagner"
+    },
+    {
+      "diary_id": "A7C3E9B1-5D2F-8A4B-C6E1-9F3A7B5D2C8E",
+      "diary_title": "Toulouse, La Ville Rose",
+      "diary_main_text": "d9.json",
+      "diary_upload_datetime": "2023-11-18 09:45:15",
+      "diary_image": "place_capitole.jpg",
+      "diary_upload_username": "Jean-Baptiste Occitan"
+    },
+    {
+      "diary_id": "D8F2A4C7-1B9E-5A3D-F6B2-8E1C4A7D9F2B",
+      "diary_title": "Annecy, Venise des Alpes",
+      "diary_main_text": "d10.json",
+      "diary_upload_datetime": "2023-12-02 14:20:40",
+      "diary_image": "lac_annecy.jpg",
+      "diary_upload_username": "Chloé Montagne"
+    },
+    {
+      "diary_id": "B6E9A2D5-7C1F-4B8A-E3D6-1F9C5A8B2E7D",
+      "diary_title": "Mont-Saint-Michel, Merveille Gothique",
+      "diary_main_text": "d11.json",
+      "diary_upload_datetime": "2024-01-15 16:55:20",
+      "diary_image": "mont_saint_michel.jpg",
+      "diary_upload_username": "Guillaume Normandie"
+    },
+    {
+      "diary_id": "C5A8F1D4-2B6E-7A9C-F4B1-5E8A2D6C9F3A",
+      "diary_title": "Versailles, Château du Roi-Soleil",
+      "diary_main_text": "d12.json",
+      "diary_upload_datetime": "2024-02-08 12:15:35",
+      "diary_image": "galerie_des_glaces.jpg",
+      "diary_upload_username": "Marie-Claire Bourbon"
+    },
+    {
+      "diary_id": "E7B2F5A8-3C6D-9A1E-B4F7-2A5C8E1B6D9A",
+      "diary_title": "Avignon, Cité des Papes",
+      "diary_main_text": "d13.json",
+      "diary_upload_datetime": "2024-03-22 17:40:10",
+      "diary_image": "palais_des_papes.jpg",
+      "diary_upload_username": "Philippe Provençal"
+    }
+  ]
+}

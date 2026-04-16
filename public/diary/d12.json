@@ -1,0 +1,25 @@
+{
+  "id": "C5A8F1D4-2B6E-7A9C-F4B1-5E8A2D6C9F3A",
+  "text": [
+    {
+      "type": "text",
+      "body": "Le Château de Versailles, symbole absolu de la grandeur française ! Cette merveille architecturale voulue par Louis XIV incarne parfaitement l'art de vivre à la française du Grand Siècle. L'approche du château par la cour d'honneur impressionne par ses dimensions colossales et la perfection de ses proportions. Les façades de pierre blanche et de brique rose s'étendent sur des centaines de mètres, créant une perspective grandiose qui saisit le visiteur dès les premiers pas dans la cour de marbre."
+    },
+    {
+      "type": "text",
+      "body": "La Galerie des Glaces demeure l'apogée de l'art décoratif français. Cette galerie longue de 73 mètres, éclairée par 17 fenêtres donnant sur les jardins et ornée de 357 miroirs, éblouit par sa magnificence. Chaque miroir réfléchit la lumière des jardins, créant un jeu infini de reflets et de perspectives. Les plafonds peints par Le Brun retracent les victoires militaires et diplomatiques de Louis XIV. C'est ici que fut signé le traité de Versailles en 1919, marquant la fin de la Première Guerre mondiale."
+    },
+    {
+      "type": "text",
+      "body": "Les Grands Appartements du Roi et de la Reine révèlent l'étiquette complexe de la cour de France. Le salon de la Guerre, le salon de la Paix, la chambre du Roi où s'accomplissaient les rituels du lever et du coucher royal, chaque pièce raconte l'histoire de la monarchie absolue. Les appartements de Marie-Antoinette témoignent du raffinement et du goût de la dernière reine de France pour les arts décoratifs. L'Opéra royal, chef-d'œuvre de l'architecte Gabriel, accueille encore aujourd'hui des représentations dans un cadre d'exception."
+    },
+    {
+      "type": "image",
+        "body":"galerie_des_glaces.jpg"
+    },
+    {
+      "type": "text",
+      "body": "Les jardins de Versailles, dessinés par André Le Nôtre, constituent un modèle de l'art des jardins à la française. Les perspectives géométriques, les bosquets secrets, les fontaines jaillissantes et les parterres de broderie s'étendent sur 815 hectares. Le Grand Trianon et le Petit Trianon offrent un contraste saisissant avec le faste du château principal. Le hameau de la Reine, reconstitution d'un village normand, témoigne du goût de Marie-Antoinette pour la vie champêtre idéalisée. Versailles demeure un témoignage unique de l'art de vivre aristocratique européen."
+    }
+  ]
+}

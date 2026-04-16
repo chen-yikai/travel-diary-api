@@ -1,0 +1,21 @@
+{
+   "id":"F3A8D2B6-9E4C-1B7F-D8A5-3F2E6C1A9B4D",
+   "text":[
+      {
+        "type":"text",
+        "body":"Strasbourg, capitale européenne et joyau de l'Alsace ! La Grande Île, classée au patrimoine mondial de l'UNESCO, m'a transporté dans un conte de fées. Les maisons à colombages colorées se reflètent dans les canaux de l'Ill, créant un tableau digne des plus beaux livres d'images. La Petite France avec ses ponts couverts et ses tours médiévales conserve l'âme de cette cité millénaire. Chaque rue pavée raconte une histoire, chaque façade témoigne du riche passé alsacien."
+      },
+      {
+        "type":"text",
+        "body":"La Cathédrale Notre-Dame de Strasbourg m'a laissé sans voix. Cette merveille gothique rose, avec sa flèche unique qui s'élance vers les cieux, domine majestueusement la ville. L'horloge astronomique, chef-d'œuvre de la Renaissance, offre un spectacle fascinant chaque jour à midi trente. Les vitraux du XIIe siècle baignent l'intérieur d'une lumière divine. J'ai passé des heures à contempler les détails sculptés de la façade occidentale, véritable livre de pierre qui narre l'histoire sainte."
+      },
+      {
+        "type":"image",
+        "body":"petite_france.jpg"
+      },
+      {
+        "type":"text",
+        "body":"Déambuler dans les institutions européennes m'a fait prendre conscience de l'importance de Strasbourg dans la construction européenne. Le Conseil de l'Europe et le Parlement européen symbolisent parfaitement cette ville-pont entre la France et l'Allemagne. La gastronomie alsacienne, entre choucroute, bretzel et vin blanc, ravit les papilles de tous les gourmets. Les winstubs traditionnelles offrent une atmosphère chaleureuse où se mélangent les langues et les cultures. Le marché de Noël de Strasbourg, le plus ancien de France, transforme la ville en un véritable village enchanté durant l'Avent."
+      }
+   ]
+}

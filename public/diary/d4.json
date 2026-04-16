@@ -1,0 +1,17 @@
+{
+   "id":"A9D4F6B2-3C7E-8A1B-D5F9-4E2A6C8B1D7F",
+   "text":[
+      {
+        "type":"text",
+        "body":"Nice, la perle de la Côte d'Azur ! Ma promenade matinale sur la célèbre Promenade des Anglais était absolument divine. Le contraste entre le bleu azur de la Méditerranée et les façades colorées des hôtels Belle Époque crée un tableau parfait. Les galets de la plage, si caractéristiques de Nice, racontent l'histoire géologique de cette région."
+      },
+      {
+        "type":"image",
+        "body":"promenade_anglais.jpg"
+      },
+      {
+        "type":"text",
+        "body":"Le Vieux-Nice avec son marché aux fleurs du Cours Saleya embaume de mille parfums. Les spécialités locales comme la socca, la pissaladière et les petits farcis niçois sont un véritable délice pour les papilles. Cette ville possède une âme particulière, entre Provence et Italie."
+      }
+   ]
+}
