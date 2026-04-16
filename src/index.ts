@@ -228,13 +228,6 @@ new Elysia()
         description: "Add or remove a diary from favorites. Requires auth_token header.",
         parameters: [
           {
-            name: "auth_token",
-            in: "header",
-            required: true,
-            schema: { type: "string" },
-            description: "Authentication token from sign in",
-          },
-          {
             name: "diary_id",
             in: "query",
             required: true,
@@ -264,15 +257,7 @@ new Elysia()
         tags: ["Diary"],
         summary: "Get favorite diaries",
         description: "Retrieve all favorite diaries for the authenticated user. Requires auth_token header.",
-        parameters: [
-          {
-            name: "auth_token",
-            in: "header",
-            required: true,
-            schema: { type: "string" },
-            description: "Authentication token from sign in",
-          },
-        ],
+        parameters: [],
         security: [{ auth_token: [] }]
       },
     }
