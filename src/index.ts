@@ -103,17 +103,13 @@ const FavoriteDiaryGetResponseSchema = t.Object({
 // Create and start server
 new Elysia()
   .use(
-    swagger({
+    openapi({
       path: "/docs",
       documentation: {
         info: {
           title: "Travel Diary API",
           version: "1.0.0",
           description: "API for managing travel diaries and favorites",
-          contact: {
-            name: "API Support",
-            email: "support@diary-api.com",
-          },
         },
         tags: [
           { 
@@ -139,17 +135,9 @@ new Elysia()
             },
           },
         },
-        servers: [
-          {
-            url: API_URL,
-            description: "API Server",
-          },
-        ],
       },
     })
   )
-  .use(openapi())
-  // Auth route
   .post(
     "/api/users/signin",
     async ({ body, set }) => {
