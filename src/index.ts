@@ -7,7 +7,16 @@ import { env } from "bun";
 
 const app = new Elysia()
   .use(cors())
-  .use(staticPlugin({ prefix: "/", detail: { hide: true } }))
+  .use(
+    staticPlugin({
+      prefix: "/",
+      detail: {
+        hide: false,
+        summary: "Public",
+        description: "User Agreement is in `/api/user-agreement.html`",
+      },
+    }),
+  )
   .use(
     openapi({
       documentation: {
