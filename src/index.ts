@@ -3,6 +3,7 @@ import { Elysia } from "elysia";
 import apiRoute from "./api";
 import staticPlugin from "@elysiajs/static";
 import cors from "@elysiajs/cors";
+import { env } from "bun";
 
 const app = new Elysia()
   .use(cors())
@@ -23,7 +24,7 @@ const app = new Elysia()
     }),
   )
   .use(apiRoute)
-  .listen(3000);
+  .listen(env.PORT || 3000);
 
 console.log(
   `🦊 Elysia is running at ${app.server?.protocol}://${app.server?.hostname}:${app.server?.port}`,
