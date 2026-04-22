@@ -25,6 +25,16 @@ const app = new Elysia()
           version: "1.0",
           description: "For french travel diary APP from WSC 2024 Module A PM",
         },
+        components: {
+          securitySchemes: {
+            ApiKeyAuth: {
+              type: "apiKey",
+              in: "header",
+              name: "auth_token",
+              description: "API Token",
+            },
+          },
+        },
       },
       scalar: {
         defaultOpenAllTags: true,

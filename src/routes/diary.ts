@@ -59,8 +59,42 @@ const diaryRoute = new Elysia({ prefix: "/diary", tags: ["Diary"] })
       app
         .put(
           "/collection",
-          ({ headers, body }) => {
+          async ({ headers, body, set }) => {
+            const file = (await Bun.file("src/diaries.json").json()) as any;
+            if (
+              !(file.data as any[]).some(
+                (diary) => diary.diary_id === body.diary_id,
+              )
+            ) {
+              set.status = 400;
+              return {
+                msg: "Invalid diary_id",
+                data: { diary_id: "", favorite_datetime: "" },
+              };
+            }
+
+            if (
+              Data.diaries.some(
+                (diary) =>
+                  diary.token === headers.auth_token &&
+                  diary.diary_id === body.diary_id,
+              )
+            ) {
+              set.status = 400;
+              return {
+                msg: "Diary already in collection",
+                data: { diary_id: "", favorite_datetime: "" },
+              };
+            }
+
             const diary = Data.addDiary(headers.auth_token, body.diary_id);
+            if (!diary) {
+              set.status = 400;
+              return {
+                msg: "Failed to add diary",
+                data: { diary_id: "", favorite_datetime: "" },
+              };
+            }
             return {
               msg: "Success",
               data: diary,
@@ -69,7 +103,41 @@ const diaryRoute = new Elysia({ prefix: "/diary", tags: ["Diary"] })
           {
             detail: {
               summary: "Add Diary to Collection",
-              description: "Add a diary entry to the user's collection (requires authentication)",
+              description:
+                "Add a diary entry to the user's collection (requires authentication)",
+            },
+            body: t.Object({
+              diary_id: t.String({ error: "diary_id is required" }),
+            }),
+            response: {
+              200: t.Object({
+                msg: t.String(),
+                data: CollectionSchema,
+              }),
+            },
+          },
+        )
+        .delete(
+          "/collection",
+          ({ headers, body, set }) => {
+            const diary = Data.removeDiary(headers.auth_token, body.diary_id);
+            if (!diary) {
+              set.status = 400;
+              return {
+                msg: "Failed to remove diary",
+                data: { diary_id: "", favorite_datetime: "" },
+              };
+            }
+            return {
+              msg: "Success",
+              data: diary,
+            };
+          },
+          {
+            detail: {
+              summary: "Remove Diary from Collection",
+              description:
+                "Remove a diary entry from the user's collection (requires authentication)",
             },
             body: t.Object({
               diary_id: t.String({ error: "diary_id is required" }),
@@ -94,7 +162,8 @@ const diaryRoute = new Elysia({ prefix: "/diary", tags: ["Diary"] })
           {
             detail: {
               summary: "Get User's Diary Collection",
-              description: "Retrieve all diary entries in the authenticated user's collection",
+              description:
+                "Retrieve all diary entries in the authenticated user's collection",
             },
             response: {
               200: t.Object({

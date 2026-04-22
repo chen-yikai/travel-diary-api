@@ -12,7 +12,7 @@ interface Diary {
 
 export class Data {
   private static users: User[] = [];
-  private static diaries: Diary[] = [];
+  static diaries: Diary[] = [];
 
   static addDiary(token: string, diary_id: string): Diary {
     const favorite_datetime = new Date()
@@ -24,6 +24,17 @@ export class Data {
     this.diaries.push(diary);
 
     return diary;
+  }
+
+  static removeDiary(token: string, diary_id: string): Diary | null {
+    const index = this.diaries.findIndex(
+      (diary) => diary.token === token && diary.diary_id === diary_id,
+    );
+    if (index !== -1) {
+      const [removedDiary] = this.diaries.splice(index, 1);
+      return removedDiary;
+    }
+    return null;
   }
 
   static getAllDiaries(token: string): Diary[] {
