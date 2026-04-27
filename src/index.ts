@@ -39,6 +39,7 @@ const app = new Elysia()
       scalar: {
         defaultOpenAllTags: true,
       },
+      provider: "swagger-ui",
       path: "/docs",
     }),
   )
